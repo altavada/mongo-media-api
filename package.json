@@ -1,7 +1,7 @@
 {
-  "name": "25-Ins_Mongoose-CRUD",
+  "name": "mongo-media-api",
   "version": "1.0.1",
-  "description": "Instructor demo for CRUD operations in Mongoose on subdocuments",
+  "description": "Challenge 18",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
