@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const Thought = require("../models/Thought");
 
 module.exports = {
   getUsers(req, res) {
@@ -9,6 +10,8 @@ module.exports = {
   getSingleUser(req, res) {
     User.findOne({ _id: req.params._id })
       .select("-__v")
+      .populate("thoughts")
+      .populate("friends")
       .then((user) =>
         !user
           ? res.status(404).json({ message: "User not found" })
@@ -39,7 +42,14 @@ module.exports = {
       .then((user) =>
         !user
           ? res.status(404).json({ message: "User not found" })
-          : res.json({ message: `Deleted: ${user}` })
+          : Thought.deleteMany({ username: user.username })
+      )
+      .then((thought) =>
+        !thought
+          ? res.status(200).json({ message: "User Removed" })
+          : res
+              .status(200)
+              .json({ message: "User and associated thoughts removed" })
       )
       .catch((err) => res.status(500).json(err));
   },
