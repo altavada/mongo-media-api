@@ -11,7 +11,7 @@ This project demonstrates a simple server-side API built with Mongoose, showing 
 # Installation
 Download the project folder to your local system. Open the folder in your terminal, run "npm install", then run "npm start" to begin the application. You can then test routes in Insomnia at 'localhost:3001'.
 # Usage
-Refer to the Routes folder for information on how to properly format HTTP requests to the server.
+Refer to the Routes folder for information on how to properly format HTTP requests to the server. [Click Here](https://drive.google.com/file/d/1rQee9Kgz_eSxKhU0nWhP92_uyj9Hkuex/view) to see a demo video.
 # License
 The MIT License
 # Contributors
